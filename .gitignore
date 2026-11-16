@@ -1,0 +1,27 @@
+﻿# .NET build output
+**/bin/
+**/obj/
+
+# Published builds and installers
+publish/
+**/publish/
+
+# Bundled Java runtimes (kept locally for Windows packaging)
+**/runtime/
+
+# Emulator user data
+rms/
+**/rms/
+*.log
+
+# IDE files
+.vs/
+**/.vs/
+*.user
+*.suo
+
+# Nested FreeJ2ME checkout - preserve locally, handle separately
+freej2me-plus/
+
+# Git metadata
+**/.git/

@@ -1,0 +1,170 @@
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="RetroJ2ME.Desktop.Views.MainWindow"
+        Title="RetroJ2ME"
+        Width="1200"
+        Height="760"
+        MinWidth="950"
+        MinHeight="600"
+        Background="#0B0F19"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid ColumnDefinitions="220,*">
+
+        <!-- SIDEBAR -->
+        <Border Grid.Column="0"
+                Background="#111827"
+                BorderBrush="#263247"
+                BorderThickness="0,0,1,0">
+
+            <Grid RowDefinitions="Auto,*,Auto">
+
+                <StackPanel Margin="22,26,22,35">
+                    <TextBlock Text="RETRO"
+                               FontSize="13"
+                               FontWeight="Bold"
+                               Foreground="#8B9BB4"
+                               LetterSpacing="4"/>
+
+                    <TextBlock Text="J2ME"
+                               FontSize="30"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+
+                    <TextBlock Text="JAVA MOBILE GAMING"
+                               FontSize="9"
+                               Foreground="#64748B"
+                               LetterSpacing="2"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Spacing="8">
+
+                    <TextBlock Text="WORKSPACE"
+                               Foreground="#64748B"
+                               FontSize="10"
+                               FontWeight="Bold"
+                               Margin="22,0,0,10"/>
+
+                    <Button Content="▦   Game Library"
+                            Click="Library_Click"
+                            Background="#24334A"
+                            Foreground="#60A5FA"
+                            HorizontalContentAlignment="Left"
+                            Padding="20,13"
+                            Margin="10,0"/>
+
+                    <Button Content="＋   Import Games"
+                            Click="Import_Click"
+                            Background="Transparent"
+                            Foreground="#AAB7CC"
+                            HorizontalContentAlignment="Left"
+                            Padding="20,13"
+                            Margin="10,0"/>
+
+                    <Button Content="▣   Device Profiles"
+                            Click="Devices_Click"
+                            Background="Transparent"
+                            Foreground="#AAB7CC"
+                            HorizontalContentAlignment="Left"
+                            Padding="20,13"
+                            Margin="10,0"/>
+
+                    <Button Content="◷   Recently Played"
+                            Click="Recent_Click"
+                            Background="Transparent"
+                            Foreground="#AAB7CC"
+                            HorizontalContentAlignment="Left"
+                            Padding="20,13"
+                            Margin="10,0"/>
+
+                    <TextBlock Text="SYSTEM"
+                               Foreground="#64748B"
+                               FontSize="10"
+                               FontWeight="Bold"
+                               Margin="22,28,0,10"/>
+
+                    <Button Content="⚙   Settings"
+                            Click="Settings_Click"
+                            Background="Transparent"
+                            Foreground="#AAB7CC"
+                            HorizontalContentAlignment="Left"
+                            Padding="20,13"
+                            Margin="10,0"/>
+
+                    <Button Content="?   About RetroJ2ME"
+                            Click="About_Click"
+                            Background="Transparent"
+                            Foreground="#AAB7CC"
+                            HorizontalContentAlignment="Left"
+                            Padding="20,13"
+                            Margin="10,0"/>
+
+                </StackPanel>
+
+                <Border Grid.Row="2"
+                        Background="#192438"
+                        CornerRadius="10"
+                        Margin="14"
+                        Padding="14">
+
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="EMULATOR STATUS"
+                                   FontSize="10"
+                                   Foreground="#8B9BB4"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="● Engine not connected"
+                                   Foreground="#F59E0B"
+                                   FontSize="11"/>
+                    </StackPanel>
+                </Border>
+
+            </Grid>
+        </Border>
+
+        <!-- MAIN AREA -->
+        <Grid Grid.Column="1"
+              RowDefinitions="Auto,*">
+
+            <Border Grid.Row="0"
+                    Background="#0F1725"
+                    BorderBrush="#263247"
+                    BorderThickness="0,0,0,1"
+                    Padding="28,20">
+
+                <Grid ColumnDefinitions="*,Auto">
+
+                    <StackPanel>
+                        <TextBlock x:Name="PageTitle"
+                                   Text="Game Library"
+                                   FontSize="23"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock x:Name="PageSubtitle"
+                                   Text="Your Java ME gaming collection"
+                                   FontSize="12"
+                                   Foreground="#8291A8"
+                                   Margin="0,5,0,0"/>
+                    </StackPanel>
+
+                    <Button Grid.Column="1"
+                            Content="＋  Import JAR"
+                            Click="Import_Click"
+                            Background="#2563EB"
+                            Foreground="White"
+                            FontWeight="Bold"
+                            Padding="22,12"
+                            VerticalAlignment="Center"/>
+
+                </Grid>
+            </Border>
+
+            <ContentControl x:Name="PageHost"
+                            Grid.Row="1"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
