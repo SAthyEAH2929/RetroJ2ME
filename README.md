@@ -79,6 +79,19 @@ Open the solution/project in Visual Studio or build the desktop project using th
 RetroJ2ME integrates the FreeJ2ME-Plus emulator.
 
 - [FreeJ2ME-Plus GitHub Repository](https://github.com/TASEmulators/freej2me-plus)
+- Hey! 👋
+
+I've developed a desktop application called **RetroJ2ME** to play classic Java mobile games on Windows PCs.
+
+I've released the first testing version, and I'd love for you to try it!
+
+🎮 Download: https://github.com/SAthyEAH2929/RetroJ2ME/releases
+
+Please install it, test some J2ME games, and share your feedback.
+
+Let me know about any bugs, installation issues, or improvements you'd suggest.
+
+Your feedback will help me improve the application. Thanks! ❤️
 
 Please refer to the emulator project's license and attribution requirements.
 
